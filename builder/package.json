@@ -1,0 +1,10 @@
+{
+  "name": "stuckmoth-builder",
+  "main": "servere/index.js",
+  "author": "femrawr",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

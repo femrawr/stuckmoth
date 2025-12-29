@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>stuckmoth builder</title>
+    </head>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const buildStatus = params.get('buildsuc');
+
+        if (buildStatus) {
+            if (buildStatus === 'yes') {
+                alert('the build was successful :D');
+            } else {
+                alert('the build failed D:');
+            }
+
+            window.location.href = window.location.pathname;
+        }
+    </script>
+
+    <body>
+        <div class="sidebar"></div>
+
+        <div class="main">
+            <button class="history">build history</button>
+
+            <div class="group">
+                <span class="label">tracking id</span>
+                <input class="tracking" type="text">
+                <button class="gen-tracking">gen random</button>
+            </div>
+
+            <div class="group">
+                <span class="label">encryption key</span>
+                <input class="encryption" type="text">
+                <button class="gen-encryption">gen random</button>
+            </div>
+
+            <div class="group" style="align-items: flex-end">
+                <span class="label">note</span>
+                <textarea class="note"></textarea>
+                <button class="gen-note">use default</button>
+            </div>
+
+            <button class="build">build</button>
+
+            <div class="history-page">
+                <button class="history-close">back</button>
+                <div class="history-builds"></div>
+            </div>
+        </div>
+    </body>
+
+    <script src="js/toggles.js"></script>
+    <script src="js/main.js"></script>
+</html>
